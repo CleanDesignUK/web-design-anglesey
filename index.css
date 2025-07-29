@@ -1,0 +1,394 @@
+/* ─── Additional spacing utilities ───────────────────────────────────────── */
+.p-8 {
+  padding: 2rem !important;
+}
+@media (min-width: 992px) {
+  .p-lg-10 {
+    padding: 6rem !important;
+  }
+}
+
+/* ─── Refined About Card ─────────────────────────────────────────────────── */
+.custom-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── Headings & Text ────────────────────────────────────────────────────── */
+.display-4 {
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  line-height: 1.1;
+}
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Accent red for first intro line */
+.text-accent {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* Muted secondary copy */
+.text-muted {
+  color: #555;
+}
+
+/* ─── Stats ──────────────────────────────────────────────────────────────── */
+.stat-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.stat-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-number {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+
+/* Vertical borders on desktop; removed on mobile */
+.about-stats .border-end {
+  border-right: 1px solid #e9ecef;
+}
+@media (max-width: 767.98px) {
+  .about-stats .border-end {
+    border-right: none;
+  }
+  .stat-col {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+/* ─── FadeInUp animation ─────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.service-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ─── Card header ───────────────────────────────────────────────────────── */
+.service-card .card-header {
+  background: var(--accent);
+  color: var(--white);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.service-card .card-header img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* ─── Card body ─────────────────────────────────────────────────────────── */
+.service-card .card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.service-card .card-body p {
+  color: var(--dark);
+}
+.service-card .card-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.service-card .card-body ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+.service-card .card-body ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+}
+
+/* ─── Unique CTA button ────────────────────────────────────────────────── */
+.btn-unique {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-unique:hover {
+  background: #a8162b;
+  transform: translateY(-2px);
+}
+
+/* ─── Section spacing & heading ────────────────────────────────────────── */
+.p-6 { padding: 3rem !important; }
+@media (min-width: 992px) {
+  .p-lg-10 { padding: 6rem !important; }
+}
+#services h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+
+/* Section padding */
+.py-8 { padding: 4rem 0 !important; }
+
+/* Title */
+#why-choose-us .display-2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+}
+
+/* Accordion base */
+#why-choose-us .accordion-button {
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--white);
+}
+#why-choose-us .accordion-button:not(.collapsed) {
+  background: rgba(197, 32, 55, 0.05);
+}
+#why-choose-us .accordion-button::after {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+#why-choose-us .accordion-body {
+  padding: 1rem 1.5rem;
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  background: var(--white);
+  font-size: 1rem;
+  color: var(--dark);
+  line-height: 1.6;
+}
+#why-choose-us .accordion-item:last-of-type .accordion-button {
+  margin-bottom: 0;
+}
+
+/* Icons */
+#why-choose-us .bi {
+  font-size: 1.5rem;
+}
+
+/* Orbit container */
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.orbit-container::before,
+.orbit-container::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.orbit-container::before {
+  width: 100%;
+  height: 100%;
+  border: 1px dotted #ddd;
+}
+.orbit-container::after {
+  width: 80%;
+  height: 80%;
+  border: 1px dashed #ddd;
+}
+
+/* Central logo */
+.central-logo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  z-index: 1;
+}
+
+/* Orbit icons */
+.orbit-icon {
+  position: absolute;
+  width: 50px; height: 50px;
+  top: 50%; left: 50%;
+  transform-origin: -160px 0;
+  transition: transform 0.3s ease;
+}
+.orbit-icon:hover {
+  transform: rotate(var(--angle)) translate(160px) scale(1.2) rotate(calc(-1 * var(--angle)));
+}
+
+/* Position each icon */
+.orbit-1 { --angle: 0deg;   transform: rotate(0deg)   translate(160px)   rotate(0deg); }
+.orbit-2 { --angle: 45deg;  transform: rotate(45deg)  translate(160px)   rotate(-45deg); }
+.orbit-3 { --angle: 90deg;  transform: rotate(90deg)  translate(160px)   rotate(-90deg); }
+.orbit-4 { --angle: 135deg; transform: rotate(135deg) translate(160px)   rotate(-135deg); }
+.orbit-5 { --angle: 180deg; transform: rotate(180deg) translate(160px)   rotate(-180deg); }
+.orbit-6 { --angle: 225deg; transform: rotate(225deg) translate(160px)   rotate(-225deg); }
+.orbit-7 { --angle: 270deg; transform: rotate(270deg) translate(160px)   rotate(-270deg); }
+.orbit-8 { --angle: 315deg; transform: rotate(315deg) translate(160px)   rotate(-315deg); }
+
+
+/* --- Safety: prevent stray horizontal scroll (optional) --- */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* --- Make all images scale nicely --- */
+img { max-width: 100%; height: auto; }
+
+/* === Orbit fix: responsive container + variable radius === */
+
+/* Base orbit radius (desktop). We adjust this at breakpoints. */
+:root { --orbit-r: 160px; }
+
+/* Make the orbit container shrink on small screens */
+.orbit-container {
+  position: relative;
+  /* scale with viewport but cap at 400px */
+  width: min(80vw, 400px);
+  height: min(80vw, 400px);
+  margin-inline: auto;
+}
+
+/* Keep the guide rings tied to the container’s size */
+.orbit-container::before,
+.orbit-container::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scale the central logo with the container */
+.central-logo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  /* between 130px and 200px, ~40% of container in between */
+  width: clamp(130px, 40%, 200px);
+  z-index: 1;
+}
+
+/* Size icons and drive their orbit using a variable radius */
+.orbit-icon {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 50px; height: 50px;
+  /* orbit around the center using the shared radius */
+  transform-origin: calc(var(--orbit-r) * -1) 0;
+  transition: transform 0.3s ease;
+}
+
+/* Preserve your angles, but translate by the variable radius */
+.orbit-1 { --angle: 0deg;   transform: rotate(0deg)   translate(var(--orbit-r)) rotate(0deg); }
+.orbit-2 { --angle: 45deg;  transform: rotate(45deg)  translate(var(--orbit-r)) rotate(-45deg); }
+.orbit-3 { --angle: 90deg;  transform: rotate(90deg)  translate(var(--orbit-r)) rotate(-90deg); }
+.orbit-4 { --angle: 135deg; transform: rotate(135deg) translate(var(--orbit-r)) rotate(-135deg); }
+.orbit-5 { --angle: 180deg; transform: rotate(180deg) translate(var(--orbit-r)) rotate(-180deg); }
+.orbit-6 { --angle: 225deg; transform: rotate(225deg) translate(var(--orbit-r)) rotate(-225deg); }
+.orbit-7 { --angle: 270deg; transform: rotate(270deg) translate(var(--orbit-r)) rotate(-270deg); }
+.orbit-8 { --angle: 315deg; transform: rotate(315deg) translate(var(--orbit-r)) rotate(-315deg); }
+
+/* Hover keeps the same center, just scales up */
+.orbit-icon:hover {
+  transform: rotate(var(--angle)) translate(var(--orbit-r)) scale(1.2) rotate(calc(-1 * var(--angle)));
+}
+
+/* --- Responsiveness: reduce radius & sizes at breakpoints --- */
+@media (max-width: 1199.98px) {
+  :root { --orbit-r: 140px; }
+}
+
+@media (max-width: 991.98px) {
+  :root { --orbit-r: 120px; }
+  .orbit-container { width: 320px; height: 320px; }
+  .orbit-icon { width: 44px; height: 44px; }
+  .central-logo { width: 160px; }
+}
+
+@media (max-width: 575.98px) {
+  :root { --orbit-r: 95px; }
+  .orbit-container { width: 260px; height: 260px; }
+  .orbit-icon { width: 36px; height: 36px; }
+  .central-logo { width: 130px; }
+}
+/* --- Make the stats row responsive & remove stray horizontal scroll --- */
+#about .custom-card { overflow: hidden; } /* optional safety */
+
+/* Keep your stats columns centered and equal-looking */
+.about-stats .stat-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Bootstrap's .border-end uses !important.
+   Kill it on small screens so stacked items don't show a vertical line. */
+@media (max-width: 767.98px) {
+  .about-stats .border-end { border-right: 0 !important; }
+  /* Optional: add subtle separators between stacked items */
+  .about-stats .stat-col { border-bottom: 1px solid #e9ecef; }
+  .about-stats .stat-col:last-child { border-bottom: 0; }
+}
+
+/* On md+, draw two full-height separators across the whole row
+   so the vertical lines always match the tallest column. */
+@media (min-width: 768px) {
+  .about-stats {
+    position: relative;
+  }
+
+  /* Suppress the per-column border to avoid double lines */
+  .about-stats .border-end { border-right: 0 !important; }
+
+  /* Full-height separators at 1/3 and 2/3 of the row width */
+  .about-stats::before,
+  .about-stats::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;               /* span full height of the tallest column */
+    width: 1px;
+    background: #e9ecef;
+    pointer-events: none;
+  }
+  .about-stats::before { left: calc(100% / 3); }
+  .about-stats::after  { left: calc(200% / 3); }
+}
+
+/* Typography scaling (you already have similar; keep for clarity) */
+.stat-number { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1; }
+.stat-label  { font-size: clamp(.95rem, 2.4vw, 1rem); }

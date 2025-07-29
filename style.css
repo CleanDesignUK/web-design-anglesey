@@ -1,0 +1,479 @@
+/* ─── Brand palette & font ────────────────────────────────────────────────── */
+:root {
+  --accent: #c52037;
+  --dark:   #121214;
+  --light:  #f1f0f1;
+  --white:  #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+}
+a { color: var(--accent); }
+a:hover { color: #a8162b; }
+
+/* ─── Buttons ────────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: #a8162b;
+  border-color: #a8162b;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────────────────────── */
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--accent);
+}
+.navbar-nav .dropdown-menu a {
+  font-weight: 400;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────────────── */
+.hero {
+  background: var(--light);
+}
+
+/* badge */
+.hero-badge {
+  --bs-badge-bg: var(--accent);
+  --bs-badge-padding-x: 1rem;
+  --bs-badge-padding-y: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* headline */
+.display-1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+}
+.lh-tight {
+  line-height: 1.1 !important;
+}
+.hero-underline {
+  position: relative;
+  display: inline-block;
+  color: #c52037;
+}
+.hero-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -8px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 5px;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+/* lead & rating */
+.lead {
+  color: #555;
+}
+.display-5 {
+  font-size: 2.5rem !important;
+}
+.rating-stars {
+  font-size: 2rem;
+  color: #ffbf00;
+  letter-spacing: 2px;
+}
+
+/* form */
+.form-control-lg {
+  padding: 0.75rem 1rem;
+}
+input.form-control {
+  border-radius: 0.5rem;
+}
+
+/* hero image */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* spacing helpers */
+.py-6 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+.py-8 { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+
+/* responsive tweaks */
+@media (max-width: 575.98px) {
+  .rating-stars { font-size: 1.5rem; }
+  .hero-underline::after { height: 8px; }
+}
+/* ─── Pill-style email form ───────────────────────────────────────────── */
+.email-pill-form {
+  background: #7e7e7e;            /* dark container */
+  padding: 0.25rem;               /* slight vertical padding */
+  border-radius: 50px;            /* full pill shape */
+  max-width: 600px;               /* optional: constrain width */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.email-pill-form .form-control {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: #f1f0f1;
+  flex: 1;                        /* take up all available space */
+}
+
+.email-pill-form .form-control::placeholder {
+  color: #ccc;
+}
+
+.email-pill-form .btn {
+  background: var(--accent);     /* your red */
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  margin-left: 0.25rem;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.email-pill-form .btn:hover {
+  background: #a8162b;           /* slightly darker on hover */
+}
+
+
+/* Integrations stripe and card */
+.bg-accent {
+  background: var(--accent);
+}
+
+.py-8 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.integration-card {
+  background: var(--white);
+  border-radius: 1rem;
+  max-width: 960px;
+}
+
+/* Tagline */
+.integration-card .h5 {
+  color: var(--dark);
+}
+
+/* Logos row */
+.integration-logo {
+  max-height: 50px;
+  filter: grayscale(0.4);
+  transition: filter 0.3s, transform 0.3s;
+}
+.integration-logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Ensure white card overlaps red stripe on mobile & desktop */
+#integrations .integration-card {
+  position: relative;
+  top: -2rem;
+}
+
+/* Add extra bottom overlap */
+#integrations {
+  margin-bottom: -2rem;
+}
+/* Unified logo size with red tint by default, original on hover */
+.integration-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  /* Tint to #c52037 */
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(340deg) saturate(500%) brightness(80%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.integration-logo:hover {
+  /* Remove tint to show original logo colours */
+  filter: none;
+  transform: scale(1.1);
+}
+
+
+
+
+/* ——— 24/7 Support Section ———————————————————————————————————————— */
+#support {
+  background: var(--accent);
+}
+#support .btn-light {
+  background: var(--white);
+  color: var(--accent);
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+#support .btn-light:hover {
+  transform: translateY(-2px);
+}
+
+/* Spacing helpers */
+.py-8 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+.display-2 {
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  line-height: 1.1;
+}
+.lead {
+  font-size: 1.125rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+/* Support section team image */
+.support-image-wrapper {
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+.support-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+/* ================= Testimonials ================= */
+.testimonials {
+  --pad-x: 1rem;
+  background-color: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 2rem var(--pad-x);
+  padding-bottom: 8rem;
+  position: relative;
+}
+
+.testimonials h2 {
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Mobile: carousel with scroll-snap --- */
+.cards {
+  display: flex;                         /* becomes grid on md+ */
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.25rem var(--pad-x) 0.75rem; /* a little breathing room for snapping */
+  scroll-padding: 1rem;
+}
+
+/* Hide scrollbars (visual only) */
+.cards::-webkit-scrollbar { display: none; }
+.cards { scrollbar-width: none; }
+
+/* Each slide */
+.card {
+  flex: 0 0 clamp(86%, calc(100% - 3rem), 100%); /* show a hint of next slide */
+  scroll-snap-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: left;
+  color: #c52037;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.stars {
+  color: #FBBF24;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+.card p { margin-bottom: 0.75rem; }
+.card .author { font-weight: 700; }
+
+/* Carousel controls (phones only) */
+.t-controls {
+  position: absolute;
+  left: 0; right: 0; bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.t-btn {
+  width: 40px; height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  color: var(--accent);
+  display: grid; place-items: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+}
+.t-btn i { font-size: 1.1rem; line-height: 1; }
+
+/* --- Tablet/Desktop: revert to grid, hide controls --- */
+@media (min-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    gap: 1.5rem;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+  .card {
+    flex: initial;
+    scroll-snap-align: initial;
+  }
+  .t-controls { display: none; }
+}
+
+/* ─── FINAL CTA Section ─────────────────────────────────────────────────── */
+#final-cta {
+  position: relative;
+  background: transparent;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+/* angled colour blocks */
+#final-cta .cta-bg-top,
+#final-cta .cta-bg-bottom {
+  position: absolute;
+  left: -25%;
+  width: 150%;
+  height: 50%;
+  background: var(--accent);
+  transform: skewY(-5deg);
+  z-index: 0;
+}
+#final-cta .cta-bg-top {
+  top: -20%;
+}
+#final-cta .cta-bg-bottom {
+  bottom: -20%;
+  transform: skewY(-5deg) rotate(180deg);
+}
+
+/* white card */
+#final-cta .cta-card {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  border-radius: 1rem;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* heading & text */
+#final-cta .display-5 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+#final-cta p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* form inputs */
+#final-cta .form-control {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  transition: border-color 0.2s;
+}
+#final-cta .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+/* button */
+#final-cta .btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+}
+#final-cta .btn-primary:hover {
+  background: #a8162b;
+  transform: translateY(-2px);
+}
+
+/* responsive gutters */
+@media (max-width: 767.98px) {
+  #final-cta .cta-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ===== Footer Styles ===== */
+.site-footer {
+  background: var(--dark);
+  color: #bbb;
+  /* bottom padding already from pb-5 */
+}
+
+/* Ensure plenty of breathing room at the bottom */
+.site-footer.pb-5 {
+  padding-bottom: 3rem !important;
+}
+
+.site-footer a.footer-link {
+  color: #bbb;
+  text-decoration: none;
+}
+.site-footer a.footer-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  color: #bbb;
+  font-size: 1.25rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icon:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.site-footer hr {
+  opacity: 0.2;
+}
+
+@media (max-width: 575.98px) {
+  .site-footer .text-md-end {
+    text-align: left !important;
+    margin-top: 1.5rem;
+  }
+}
+
+/* remove any underline/stripe from social links */
+.site-footer .social-icon {
+  text-decoration: none;
+}
+.site-footer .social-icon:hover {
+  text-decoration: none;
+}
+
+
+/* Make sure sticky sits above overlapping sections */
+nav.navbar.sticky-top { z-index: 1040; }
+
+/* In-page anchors land below the sticky bar */
+[id] { scroll-margin-top: 84px; } /* adjust if your nav height differs */
