@@ -1,0 +1,189 @@
+/* ——— About Hero overrides ——— */
+#about-hero {
+  padding: 6rem 0;
+}
+#about-hero .highlight {
+  color: var(--accent);
+}
+/* Hero button “pressed” state */
+#about-hero .btn-primary:active,
+#about-hero .btn-primary:focus {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  box-shadow: none; /* remove Bootstrap’s default focus shadow if you like */
+}
+
+/* ——— Image-collage layout ——— */
+.image-collage {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 360px;
+  margin: 0 auto;
+  /* optional: preserve aspect ratio on small screens */
+}
+.image-collage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/images/shape-outline.svg') center/contain no-repeat;
+  opacity: 0.15;
+}
+.image-collage img {
+  position: absolute;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  object-fit: cover;
+}
+
+/* position each photo */
+.img-1 { top:   0;    left: 120px; width:160px; height:160px; }
+.img-2 { top:  40px;  left:   0;   width:100px; height:100px; }
+.img-3 { top:  40px;  right:  0;   width:100px; height:100px; }
+.img-4 { bottom:40px; left:  40px; width:120px; height:120px; }
+.img-5 { bottom:40px; right: 40px; width:120px; height:120px; }
+
+/* ——— Our Story Typography tweaks ——— */
+#about-hero + section h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+/* ─── Core Values Section ─────────────────────────────────── */
+
+#core-values {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#core-values h3 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1.2;
+}
+
+#core-values .text-secondary {
+  color: #555 !important;
+}
+
+.value-features .bi-check2-lg {
+  font-size: 1.25rem;
+}
+
+.value-features span {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+/* Logo-panel centering */
+.logo-panel {
+  max-width: 240px;
+}
+/* Center the Core Values card */
+#core-values .core-card {
+  max-width: 1100px;  /* or whatever max you prefer */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure the two columns inside the card stay centered */
+#core-values .row.justify-content-center > [class*="col-"] {
+  /* nothing here—bootstrap’s justify-content-center does the magic */
+}
+
+/* (optional) add a little extra top/bottom margin if needed */
+#core-values {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+/* Center + constrain the card */
+#core-values .core-card {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Values image wrapper: border + relative positioning */
+.values-image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Put a light border behind the image to match the card style */
+.values-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Plus-icon styling */
+.plus-icon {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--accent);
+  z-index: 1;
+}
+
+/* Top-left plus */
+.plus-1 {
+  top: -1rem;
+  left: -1rem;
+}
+
+/* Bottom-right plus */
+.plus-2 {
+  bottom: -1rem;
+  right: -1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  /* shrink the illustration on tablets */
+  .values-image-wrapper {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* stack and center on phones */
+  #core-values .row.justify-content-between {
+    justify-content: center !important;
+  }
+}
+/* ─── Core Card Hover ────────────────────────────────────────── */
+.core-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.core-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* ─── List-Item Hover ────────────────────────────────────────── */
+.value-features li {
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: default;
+}
+.value-features li:hover {
+  transform: translateX(8px);
+  color: var(--accent);
+}
+
+/* ─── Plus-Icon Hover ───────────────────────────────────────── */
+.plus-icon {
+  transition: transform 0.25s ease;
+}
+.plus-icon:hover {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* ─── Image Wrapper Hover (optional) ────────────────────────── */
+.values-image-wrapper {
+  transition: transform 0.3s ease;
+}
+.values-image-wrapper:hover {
+  transform: scale(1.02);
+}

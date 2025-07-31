@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Website Design Anglesey</title>
+  <meta name="description" content="Get in touch with our Anglesey web design & SEO experts. 24/7 WhatsApp, phone and email support for North Wales businesses.">
+  
+  <!-- Google Fonts / Bootstrap / Icons / Site CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">    <!-- your global styles -->
+  <link href="contact.css" rel="stylesheet">   <!-- page-specific tweaks -->
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-white py-3" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center me-lg-4" href="index.html">
+        <img src="Website_Design_Anglesey_logo.png" alt="Web Design Anglesey logo" width="40" height="40" class="me-2">
+        Web Design Anglesey
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-lg-center" id="navMain">
+        <ul class="navbar-nav gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services/website-design.html">Website Design</a></li>
+              <li><a class="dropdown-item" href="services/ecommerce.html">E-commerce</a></li>
+              <li><a class="dropdown-item" href="services/branding.html">Business Branding</a></li>
+              <li><a class="dropdown-item" href="services/digital-marketing.html">Digital Marketing</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- updated: show only ≥lg -->
+        <a class="btn btn-primary rounded-pill px-4 ms-lg-4 d-none d-lg-inline-block"
+        href="contact.html#quote">
+        Free Consultation
+        </a>
+    </div>
+  </nav>
+
+  <!-- HERO / CONTACT INFO -->
+  <header class="contact-hero position-relative flex-grow-1 py-8 text-dark">
+<div class="hero-overlay"></div>
+     <div class="container position-relative">
+    <div class="row gy-5 align-items-center">
+        <!-- Left: contact details -->
+        <div class="col-lg-6">
+          <h1 class="fw-bold mb-3">Talk to Your Anglesey Web Design Partner</h1>
+          <p class="mb-4 fs-5">
+            Phone, WhatsApp or email our Anglesey-based team 24/7 for a free website design, e-commerce or SEO consultation serving Bangor, Caernarfon, Holyhead & all of North Wales.
+          </p>
+          <ul class="list-unstyled text-dark fs-5">
+            <li class="mb-4">
+              <i class="bi bi-telephone-fill text-accent me-2"></i>
+              <a href="tel:+447367292269" class="text-dark text-decoration-none">+44 7367 292269</a>
+            </li>
+            <li class="mb-4">
+              <i class="bi bi-whatsapp text-accent me-2"></i>
+              <a href="https://wa.me/447367292269" target="_blank" class="text-dark text-decoration-none">Chat on WhatsApp</a>
+            </li>
+            <li class="mb-4">
+              <i class="bi bi-envelope-fill text-accent me-2"></i>
+              <a href="mailto:cleandesign.uk@gmail.com" class="text-dark text-decoration-none">
+                cleandesign.uk@gmail.com or
+              </a>
+              <a href="mailto:jesse@cleandesignuk.com" class="text-dark text-decoration-none">
+                jesse@cleandesignuk.com
+              </a>
+            </li>
+            <li class="mb-4">
+              <i class="bi bi-geo-alt-fill text-accent me-2"></i>
+              4 Ffordd Cerrig Mawr, Caergelliog LL65 3LU
+            </li>
+            <li>
+              <i class="bi bi-clock-fill text-accent me-2"></i>
+              Working Hours: 24/7
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Web3Form-powered contact form -->
+        <div class="col-lg-6">
+          <div class="card bg-danger bg-opacity-10 border-0 rounded-4 p-4">
+            <h2 class="h4 mb-4">General Enquiries</h2>
+            <form id="contactForm">
+              <!-- Web3Form integration -->
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+              <input type="hidden" name="subject" value="New Enquiry – Website Design Anglesey" />
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Your Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Your e-mail here" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" name="phone" placeholder="Your phone number" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Subject</label>
+                  <select class="form-select" name="enquiry_type" required>
+                    <option value="">Select a subject…</option>
+                    <option>Website Design</option>
+                    <option>E-commerce</option>
+                    <option>SEO & Marketing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Your Message</label>
+                  <textarea class="form-control" name="message" rows="4" placeholder="Write your message" required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-accent btn-lg rounded-pill px-5">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FREE CONSULTATION ===== -->
+<section id="consultation" class="py-8 bg-light">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="display-4 fw-bold mb-3">
+          Book Your Free Website Design &amp; SEO Consultation
+        </h2>
+        <p class="lead text-secondary mb-4">
+          Speak directly with our Anglesey &amp; North Wales web design experts.  
+          Get personalised, data-driven advice on boosting your Google rankings, 
+          speeding up your site &amp; converting more visitors into customers.
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/jesse-cleandesignuk/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== SCROLLING TESTIMONIALS ===== -->
+<section class="testimonials">
+  <h2>Trusted by 50+ businesses across Anglesey, North Wales &amp; the UK</h2>
+
+  <!-- Controls (show on small screens only) -->
+  <div class="t-controls d-md-none" aria-hidden="true">
+    <button class="t-btn t-prev" type="button" aria-label="Previous testimonial">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="t-btn t-next" type="button" aria-label="Next testimonial">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Carousel / Grid container -->
+  <div class="cards" id="testimonial-cards">
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“From the initial consultation to the final product, Clean Design UK, especially Jesse, was fantastic. Their professionalism and friendly approach made the entire website design process smooth and enjoyable. The final website was even better than I envisioned. Highly recommend!”</p>
+      <p class="author">— Maxine Phillips</p>
+    </div>
+
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Jesse provided me with professional, unique, and useful advice about how to set up my business and move forward with it, which greatly improved my understanding. I cannot thank him enough!”</p>
+      <p class="author">— Nathan Flatt</p>
+    </div>
+
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Excellent service and great creativity… I am very happy with the outcome and I recommend Clean Design to whoever wants a neat and professional website and a good logo.”</p>
+      <p class="author">— May Berbery‑Canvin</p>
+    </div>
+
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      <p>“Clean Design is incredible. Jesse and Nova can't do enough for you whilst creating your professional and unique website… great value for money for the high‑quality website you receive.”</p>
+      <p class="author">— Colette Webb</p>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== FAQ ===== -->
+<section id="faq" class="py-8 bg-light">
+  <div class="container">
+    <h2 class="display-3 fw-bold text-center mb-5">Frequently Asked Questions</h2>
+
+    <div class="faq-card p-4 p-lg-5 mx-auto">
+      <div class="accordion" id="faqAccordion">
+
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button class="accordion-button" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse1"
+                    aria-expanded="true"
+                    aria-controls="faqCollapse1">
+              What web design services do you offer in Anglesey &amp; North Wales?
+            </button>
+          </h2>
+          <div id="faqCollapse1" class="accordion-collapse collapse show"
+               aria-labelledby="faqHeading1"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We deliver bespoke, mobile-first websites that rank and convert. Our Anglesey &amp; North Wales services include:
+              <ul>
+                <li>Responsive WordPress, Shopify, WooCommerce & other platforms builds</li>
+                <li>Custom branding and intuitive UI/UX</li>
+                <li>Page speed &amp; on-page SEO optimisation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse2"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse2">
+              How do you boost local SEO for North Wales businesses?
+            </button>
+          </h2>
+          <div id="faqCollapse2" class="accordion-collapse collapse"
+               aria-labelledby="faqHeading2"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our local-first SEO strategy combines:
+              <ul>
+                <li>Optimised meta, headings &amp; schema markup</li>
+                <li>Google Business Profile setup &amp; management</li>
+                <li>Local citations across Anglesey &amp; Gwynedd</li>
+                <li>Content targeting related keywords</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse3"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse3">
+              Can you build an e-commerce store that actually converts?
+            </button>
+          </h2>
+          <div id="faqCollapse3" class="accordion-collapse collapse"
+               aria-labelledby="faqHeading3"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, our conversion-focused shops feature:
+              <ul>
+                <li>Optimised checkout flows &amp; one-click upsells</li>
+                <li>Secure, flexible payment gateways</li>
+                <li>Mobile-first product pages</li>
+                <li>Automated cross-selling &amp; A/B testing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse4"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse4">
+              What ongoing support &amp; maintenance do you provide?
+            </button>
+          </h2>
+          <div id="faqCollapse4" class="accordion-collapse collapse"
+               aria-labelledby="faqHeading4"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Post-launch care includes:
+              <ul>
+                <li>24/7 hosting monitoring &amp; security updates</li>
+                <li>Performance &amp; speed audits</li>
+                <li>Content tweaks &amp; conversion-rate optimisation</li>
+                <li>Dedicated chat, email &amp; phone support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading5">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse5"
+                    aria-expanded="false"
+                    aria-controls="faqCollapse5">
+              How fast can I see results from your digital marketing?
+            </button>
+          </h2>
+          <div id="faqCollapse5" class="accordion-collapse collapse"
+               aria-labelledby="faqHeading5"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our hybrid approach delivers:
+              <ul>
+                <li>Instant leads via targeted PPC &amp; social ads</li>
+                <li>Organic growth in 3–6 months through SEO</li>
+                <li>Data-driven refinements to maximise ROI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== Footer ===== -->
+<footer class="site-footer bg-dark text-light pt-5 pb-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Brand & Description -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="Website Design Anglesey logo.jpg" alt="Web Design Anglesey logo" width="30" height="30" class="me-2">
+          <h5 class="mb-0">Website Design Anglesey</h5>
+        </div>
+        <p class="small mb-0">
+          Affordable web design & SEO services for small businesses across Anglesey and North Wales.
+        </p>
+      </div>
+
+      <!-- Pages -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Pages</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="/" class="footer-link">Home</a></li>
+          <li><a href="/about.html" class="footer-link">About</a></li>
+          <li><a href="/services/website-design.html" class="footer-link">Services</a></li>
+          <li><a href="/contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Policies -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Policies</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
+          <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-12 col-md-4">
+        <h6 class="text-uppercase mb-3">Follow Us</h6>
+        <a href="https://www.facebook.com/WebsiteDesignAnglesey/" target="_blank" class="social-icon me-3">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://g.co/kgs/oT4WdUH" target="_blank" class="social-icon">
+          <i class="bi bi-google"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="row">
+      <div class="col text-center small">
+        &copy; 2025 Website Design Anglesey. All rights reserved. <br>  
+        Part of
+        <a href="https://cleandesignuk.com" target="_blank" class="footer-link">Clean Design UK</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // anti-spam & keyword blocking + Web3Form submission
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim(),
+            email = f.email.value.trim(),
+            phone = f.phone.value.trim(),
+            msg  = f.message.value.toLowerCase();
+
+      // simple phone check: length & no repeat sequences or obvious patterns
+      const badPhones = ['11111','22222','33333','01234567890','0987654321','1231232123','44444','071111111'];
+      if (phone.length < 7 || badPhones.includes(phone)) {
+        return Swal.fire('Invalid phone number','Please enter a real phone number','error');
+      }
+      // block spammy message keywords
+      const banned = ['sell seo','sell backlinks','backlink','i offer backlink','i offer digital marketing','i offer web design','i offer google rank','improve your rank','improve your rank','improve your seo'];
+      if (banned.some(k => msg.includes(k))) {
+        return Swal.fire('Invalid message','Please remove promotional offers from your message','error');
+      }
+
+      // build form data
+      let data = new FormData(f);
+      // send to Web3Form
+      try {
+        let res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        });
+        let json = await res.json();
+        if (json.success) {
+          Swal.fire('Thank you!','Our team will get in touch with you soon','success');
+          f.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        Swal.fire('Oops','Something went wrong. Please try again later','error');
+      }
+    });
+  </script>
+
+  <script>
+  (function () {
+    const container = document.getElementById('testimonial-cards');
+    if (!container) return;
+
+    const prev = document.querySelector('.testimonials .t-prev');
+    const next = document.querySelector('.testimonials .t-next');
+
+    // Only attach on small screens; harmless elsewhere
+    function scrollByOne(direction = 1) {
+      const slide = container.querySelector('.card');
+      if (!slide) return;
+      const amount = slide.getBoundingClientRect().width + parseFloat(getComputedStyle(container).gap || 16);
+      container.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    prev && prev.addEventListener('click', () => scrollByOne(-1));
+    next && next.addEventListener('click', () => scrollByOne(1));
+  })();
+</script>
+</body>
+</html>

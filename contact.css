@@ -1,0 +1,88 @@
+/* Contact page overrides & form styling */
+.contact-hero {
+  background: #121214;
+  color: #121214;
+}
+.contact-hero a { text-decoration: underline; }
+.contact-hero .bg-danger {
+  background-color: rgba(197,32,55,0.1) !important;
+}
+.btn-accent {
+  background: #c52037;
+  color: #fff;
+  border: none;
+}
+.btn-accent:hover {
+  background: #a8162b;
+}
+
+/* Form card */
+.card {
+  border: none;
+}
+form .form-label {
+  font-weight: 600;
+  color: #333;
+}
+form .form-control,
+form .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+form .form-control:focus,
+form .form-select:focus {
+  border-color: #c52037;
+  box-shadow: none;
+}
+
+
+
+/* dark translucent overlay for text contrast */
+.contact-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure all inner content sits above the overlay */
+.contact-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* adjust padding if needed */
+.contact-hero.py-8 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+/* Hero with full-bleed background image */
+.contact-hero {
+  background: url(bg-contact.jpg) center center/cover no-repeat;
+  /* fallback color while image loads */
+  background-color: #121214;
+}
+
+/* dark translucent overlay for text contrast */
+.contact-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(202, 202, 202, 0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure all inner content sits above the overlay */
+.contact-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* adjust padding if needed */
+.contact-hero.py-8 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+

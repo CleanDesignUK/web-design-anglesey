@@ -477,3 +477,67 @@ nav.navbar.sticky-top { z-index: 1040; }
 
 /* In-page anchors land below the sticky bar */
 [id] { scroll-margin-top: 84px; } /* adjust if your nav height differs */
+
+/* ===== FAQ Styles ===== */
+#faq {
+  background: var(--light);
+}
+#faq .display-3 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+/* Center & constrain width */
+#faq .faq-card {
+  max-width: 800px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+/* Each question block */
+#faq .accordion-item {
+  border: none;
+}
+#faq .accordion-button {
+  background: #fff;
+  border: none;
+  border-radius: .75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  color: var(--dark);
+}
+#faq .accordion-button:not(.collapsed) {
+  background: #fff;
+}
+#faq .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(197,32,55,0.25);
+}
+#faq .accordion-button::after {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+/* Answer panels */
+#faq .accordion-body {
+  padding: 1rem 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  border: none;
+  background: #fff;
+  color: var(--dark);
+  line-height: 1.6;
+  border-radius: 0 0 .75rem .75rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+  #faq .accordion-button {
+    font-size: 1rem;
+    padding: .75rem 1rem;
+  }
+  #faq .accordion-body {
+    font-size: .95rem;
+  }
+}
