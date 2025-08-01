@@ -1,0 +1,308 @@
+/* ───────────────────────────────────────────────────────────────
+   Website-Design page (overrides style.css)
+   ───────────────────────────────────────────────────────────── */
+
+:root{ --accent:#c61726; }
+
+/* ----------  CARD  ------------------------------------------------------ */
+.wd-card{
+  background:#f8f8f8;
+  border-radius:1.5rem;
+  padding:2.5rem 2rem;
+  box-shadow:0 10px 28px rgb(0 0 0 / .04);
+  max-width:78rem;
+}
+
+/* tighten on >lg so hero → card gap feels lighter */
+@media(min-width:992px){ .wd-detail{padding-top:3.5rem;} }
+
+/* ----------  FEATURE LIST  --------------------------------------------- */
+.wd-list{margin:0 0 1.8rem 0;padding:0;}
+.wd-list li{
+  list-style:none;
+  margin:.4rem 0;
+  position:relative;
+  padding-left:1.5rem;
+  font-size:1rem;
+}
+.wd-list li::before{
+  content:"\f26e";
+  font-family:"bootstrap-icons";
+  color:var(--accent);
+  position:absolute;left:0;top:.12rem;
+}
+
+/* ----------  CTA BUTTON  ------------------------------------------------- */
+.btn-accent{
+  --bs-btn-bg:var(--accent);
+  --bs-btn-border-color:var(--accent);
+  --bs-btn-hover-bg:#a9121f;
+  --bs-btn-hover-border-color:#a9121f;
+  border-radius:2rem;
+  padding:.55rem 1.9rem;
+  font-weight:600;
+  color:#fff;
+}
+
+
+/* ----------  IMAGE CAROUSEL  -------------------------------------------- */
+.image-grid{
+  margin-top:2rem;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;          /* Firefox */
+}
+.image-grid::-webkit-scrollbar{display:none;} /* Chrome */
+
+.image-track{
+  display:flex;
+  gap:1.25rem;
+}
+.image-track img{
+  flex:0 0 210px;
+  width:210px; height:210px;
+  object-fit:cover;
+  border-radius:1rem;
+  box-shadow:0 3px 12px rgb(0 0 0 / .05);
+}
+
+/* show more tiles on wider screens */
+@media(min-width:768px){
+  .image-track img{flex-basis:240px;width:240px;height:240px;}
+}
+@media(min-width:992px){
+  .image-track img{flex-basis:260px;width:260px;height:260px;}
+}
+
+/* drag-scroll cursor hint */
+.image-grid{cursor:grab;}
+.image-grid:active{cursor:grabbing;}
+
+
+
+/* container card */
+.wd-card{
+  background:
+#eeeeee;                      /* pure white card */
+  border-radius:1.75rem;
+  box-shadow:0 12px 32px rgb(0 0 0 / .06);
+  padding:2.8rem 2.2rem;
+}
+
+
+/* ─── Unified tech-chip style ───────────────────────── */
+.wd-chip{
+    display:inline-flex;                 /* better centring   */
+    align-items:center;
+    justify-content:center;
+    padding:.5rem 1.4rem;                /* one value         */
+    font-size:.9rem;
+    font-weight:600;
+    color:#111;
+    background:#fff;
+    border:1px solid #d9d9d9;
+    border-radius:2rem;
+    box-shadow:
+        0 3px 6px rgb(0 0 0 / .08),
+        0 1px 2px rgb(0 0 0 / .04) inset,
+        0 0   0 1px rgb(255 255 255 / .6) inset;
+    transition:transform .15s ease, box-shadow .15s ease;
+    margin:.3rem;                        /* ← uniform gap     */
+}
+.wd-chip:hover   { transform:translateY(-2px); }
+.wd-chip:active  {
+    transform:none;
+    box-shadow:
+        0 1px 3px rgb(0 0 0 / .12) inset,
+        0 0   0 1px rgb(0 0 0 / .04);
+}
+
+
+/* optional spacing helper */
+.wd-chip + .wd-chip{ margin-left:.6rem; margin-top:.6rem; }
+
+/* ─── LIST BULLETS (keep accent) ──────────────── */
+.wd-list li::before{ color:var(--accent,#c61726); }
+
+/* ─── IMAGE CAROUSEL (keeps previous settings) ─ */
+.image-track img{
+  border:1px solid #e7e7e7;
+  background:#fafafa;
+}
+/* ░░░ Pricing switcher ░░░──────────────────────────────────────── */
+#site-packages{--gap:1.25rem;}
+
+.price-toggle{
+  position:relative;
+  display:inline-flex;
+  background:none;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:2.5rem;
+  overflow:hidden;
+  padding:0;
+}
+
+.pt-btn{
+  position:relative;
+  z-index:2;
+  border:0;
+  background:none;
+  color:#fff;
+  font-weight:600;
+  padding:.6rem 2.4rem;
+  font-size:1rem;
+  transition:color .15s;
+}
+
+.pt-btn.active{color:#fff;
+background: #c61726;}
+
+.pt-indicator{
+  position:absolute;
+  inset:0 50% 0 0;               /* start under “One-Off” */
+  background:var(--accent,#000000);
+  border-radius:2.5rem;
+  transition:transform .25s cubic-bezier(.42,0,.2,1), inset .25s;
+}
+
+/* ░░░ Package cards ░░░────────────────────────────────────────── */
+.pkg-card{
+  height:100%;
+  background:#111;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:.9rem;
+  padding:2rem 1.6rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.4rem;
+  color:#fff;
+  transition:background .3s,border .3s,transform .3s;
+}
+
+.pkg-card.featured{
+  background:#c61726;
+  color:#ffffff;
+}
+
+.btn-pkg-ft{
+  margin-top:auto;
+  font-weight:600;
+  border-radius:2rem;
+  padding:.7rem 1.2rem;
+  text-align:center;
+  transition:background .2s;
+  color: #fff;
+  background: #111;
+}
+
+.btn-pkg-ft:hover{background:#000000;
+color: #fff;}
+
+.pkg-title{font-size:1.1rem;font-weight:600;margin:0;}
+
+.pkg-price{
+  font-size:1.35rem;
+  font-weight:700;
+  margin:0;
+}
+
+.pkg-list{padding:0;margin:0;list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.pkg-list li{position:relative;padding-left:1.4rem;font-size:.94rem;}
+.pkg-list li::before{
+  content:"\f26e";
+  font-family:"bootstrap-icons";
+  position:absolute;left:0;top:.1rem;
+  color:var(--accent,#c61726);
+  font-size:.9rem;
+}
+
+.btn-pkg{
+  margin-top:auto;
+  background:var(--accent,#c61726);
+  color:#fff;
+  font-weight:600;
+  border-radius:2rem;
+  padding:.7rem 1.2rem;
+  text-align:center;
+  transition:background .2s;
+}
+.btn-pkg:hover{background:#a9121f;}
+
+@media (min-width:992px){
+  .pkg-card:hover{transform:translateY(-6px);}
+  .pkg-card:not(.featured):hover{background:rgba(255,255,255,.1);}
+}
+
+/* helper that **always** puts its single child in the middle */
+.toggle-holder{
+  display:flex;              /* becomes a flex-box */
+  justify-content:center;    /* centres horizontally */
+  margin-block:2rem 3rem;    /* optional top/bottom breathing-space */
+}
+
+/* LIGHT-ON-HOVER effect for all non-featured cards */
+.pkg-card:hover{
+  background:#fff;
+  border-color:#e4e4e4;
+  color:#111;                     /* body copy */
+
+  /* inner elements inherit unless they have fixed colours: */
+}
+.pkg-card:hover .pkg-title,
+.pkg-card:hover .pkg-price,
+.pkg-card:hover .pkg-list li::before{
+  color:#111;                     /* headings + ticks go dark */
+}
+
+/* if you want the “Select Package” button to invert on hover as well */
+.pkg-card:hover .btn-pkg{
+  background:#111;
+  color:#fff;
+}
+.pkg-card.featured:hover{
+  background:#fff;      /*   <– keep or drop */
+  color:#111;
+}
+/* ░░ Price-toggle pill ░░ */
+.price-toggle{
+  position:relative;
+  display:inline-flex;
+  border:1.5px solid rgba(255,255,255,.55);
+  border-radius:3rem;
+  padding:0;
+  overflow:hidden;
+  isolation:isolate;          /* so the shadow never leaks */
+}
+
+.pt-btn{
+  position:relative;
+  z-index:2;                  /* sits above the indicator */
+  flex:0 0 8rem;              /* identical widths */
+  font:600 1rem/1 "Inter",sans-serif;
+  padding:.75rem 0;
+  color:#fff;
+  background:none;
+  border:0;
+  cursor:pointer;
+  transition:color .2s;
+}
+
+.pt-indicator{               /* the sliding red pill */
+  position:absolute;
+  inset:0 50% 0 0;           /* start under "One-Off" */
+  background:var(--accent,#c61726);
+  border-radius:inherit;
+  transition:transform .25s cubic-bezier(.45,0,.2,1);
+  box-shadow:0 2px 6px rgb(0 0 0 /.25) inset;
+}
+
+/* move the indicator when "Monthly" is active */
+.price-toggle.monthly .pt-indicator{
+  transform:translateX(100%);
+}
+
+/* light text over indicator, dim elsewhere */
+.price-toggle .pt-btn{color:#ddd;}
+.price-toggle .pt-btn:hover{color:#fff}
+.price-toggle.one-off   .pt-btn[data-plan="one-off"],
+.price-toggle.monthly  .pt-btn[data-plan="monthly"]{color:#fff;}

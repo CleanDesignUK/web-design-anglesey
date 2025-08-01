@@ -87,10 +87,6 @@
   margin-right: auto;
 }
 
-/* Ensure the two columns inside the card stay centered */
-#core-values .row.justify-content-center > [class*="col-"] {
-  /* nothing here—bootstrap’s justify-content-center does the magic */
-}
 
 /* (optional) add a little extra top/bottom margin if needed */
 #core-values {

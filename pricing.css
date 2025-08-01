@@ -1,0 +1,108 @@
+/*  ───────────────────────────────────────────────────────────────
+    Volume-pricing estimator – overrides only
+    (keeps your brand palette from style.css)
+   ─────────────────────────────────────────────────────────────── */
+
+/* ---------- 1. wrapper & icon ---------- */
+.pricing-wrap{
+  max-width: 820px;
+  margin-inline:auto;
+}
+
+.price-icon{
+  width:56px;height:56px;
+  background:var(--accent);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.75rem;font-weight:700;
+}
+
+/* ---------- 2. number picker ---------- */
+.finder-tag{color:#5A4FFF;font-weight:600;}
+
+.picker{width:200px;}
+.picker input{
+  text-align:center;
+  padding-right:3rem;
+}
+.picker-btn{
+  --size:18px;
+  position:absolute;right:6px;
+  width:var(--size);height:var(--size);
+  display:flex;align-items:center;justify-content:center;
+  border:0;background:none;color:#5A4FFF;line-height:1;
+  cursor:pointer;
+}
+.picker-btn.up{top:6px;}
+.picker-btn.down{bottom:6px;}
+
+/* ---------- 3. red price card ---------- */
+.price-card{
+  background:var(--accent);
+  padding:2rem 1.75rem;
+}
+.price-card .trial-badge{
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:6px;
+  padding:.25rem .75rem;
+  font-size:.875rem;
+}
+.price-card .display-1{
+  font-size:3.75rem;letter-spacing:-1px;
+}
+
+/* ---------- 4. responsive tweaks ---------- */
+@media (max-width:576px){
+  .price-icon{width:44px;height:44px;font-size:1.25rem;}
+  .price-card .display-1{font-size:3rem;}
+}
+/* Center stack & limit card width
+   ------------------------------------------- */
+.estimator { max-width: 42rem; margin-inline: auto; }
+
+.price-card {
+  background: var(--accent);
+  border: 0;
+  width: 100%;
+}
+.price-card .card-inner {
+  padding: 2.5rem 2rem;
+  max-width: 32rem;             /* nice readable line length */
+}
+
+/* “One-off price” badge */
+.badge-light-subtle{
+  font-size: .75rem;
+  background: rgba(255,255,255,.2);
+  padding: .35rem .6rem;
+  border-radius: .5rem;
+}
+
+/* bump the FIND YOUR PLAN label */
+.finder-tag{
+  font-size: 1rem;
+  letter-spacing: .02em;
+  color: var(--dark);
+}
+
+/* custom number picker arrows – keep touch-friendly */
+.picker { width: 8rem; }
+.picker-btn{
+  position:absolute; right:.5rem; width:1.25rem; height:1rem;
+  border:0; background:none; color:var(--accent);
+  display:flex; justify-content:center; align-items:center;
+  padding:0; line-height:0; cursor:pointer;
+
+}
+.picker-btn.up   { top:.4rem; }
+.picker-btn.down { bottom:.4rem; }
+
+/* fully responsive: stack neatly under 576 px */
+@media (max-width:575.98px){
+  .heading-stack{ text-align:left; }
+  .estimator    { align-items:stretch; }
+}
+
+.hero-color{
+    color: #c52037;
+}
