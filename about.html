@@ -3,9 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0006YLL6QM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0006YLL6QM');
+</script>
+
+  <!-- Primary SEO -->
   <title>About Us | Website Design Anglesey & North Wales SEO Experts</title>
-  <meta name="description" content="Learn how our Anglesey-based team of web developers, designers and digital marketers crafts bespoke, SEO-optimised websites that boost rankings and revenue across North Wales.">
+  <meta name="description" content="Meet Website Design Anglesey — a local team crafting fast, mobile-first and SEO-optimised websites that grow rankings and revenue across Anglesey & North Wales.">
   <link rel="canonical" href="https://websitedesignanglesey.com/about.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="language" content="en-GB">
+
+  <!-- Local hints -->
+  <meta name="geo.region" content="GB-WLS">
+  <meta name="geo.placename" content="Caergeiliog, Anglesey">
+  <meta name="format-detection" content="telephone=yes">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Website Design Anglesey">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="About Us | Website Design Anglesey & North Wales SEO Experts">
+  <meta property="og:description" content="Anglesey-based web design & SEO team building high-performance sites for local businesses across North Wales.">
+  <meta property="og:url" content="https://websitedesignanglesey.com/about.html">
+  <meta property="og:image" content="https://websitedesignanglesey.com/assets/og-about.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Website Design Anglesey & North Wales SEO Experts">
+  <meta name="twitter:description" content="Local, mobile-first web design and SEO specialists for Anglesey & North Wales.">
+  <meta name="twitter:image" content="https://websitedesignanglesey.com/assets/og-about.jpg">
+
 
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +55,122 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
     <link href="about.css" rel="stylesheet">
+    <link rel="stylesheet" href="cookie.css">
+
 
     
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+<!-- Structured Data: AboutPage + LocalBusiness graph (keeps same @ids as homepage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://websitedesignanglesey.com/#website",
+        "url": "https://websitedesignanglesey.com/",
+        "name": "Website Design Anglesey",
+        "publisher": { "@id": "https://websitedesignanglesey.com/#organization" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": ["LocalBusiness","ProfessionalService"],
+        "@id": "https://websitedesignanglesey.com/#organization",
+        "name": "Website Design Anglesey",
+        "url": "https://websitedesignanglesey.com/",
+        "image": "https://websitedesignanglesey.com/Website_Design_Anglesey_logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://websitedesignanglesey.com/Website_Design_Anglesey_logo.png"
+        },
+        "email": "mailto:jesse@cleandesignuk.com",
+        "telephone": "+44 7367 292269",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4 Ffordd Cerrig Mawr",
+          "addressLocality": "Caergeiliog",
+          "addressRegion": "Anglesey",
+          "postalCode": "LL65 3LU",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Anglesey" },
+          { "@type": "AdministrativeArea", "name": "North Wales" }
+        ],
+        "availableLanguage": ["English","Welsh"],
+        "sameAs": [
+          "https://www.facebook.com/WebsiteDesignAnglesey/",
+          "https://g.co/kgs/oT4WdUH"
+        ],
+        "priceRange": "££",
+        "knowsAbout": [
+          "Website design",
+          "E-commerce development",
+          "SEO (search engine optimisation)",
+          "Branding and logo design",
+          "Digital marketing",
+          "WordPress, Shopify, WooCommerce, Webflow"
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://websitedesignanglesey.com/about.html#aboutpage",
+        "url": "https://websitedesignanglesey.com/about.html",
+        "name": "About Website Design Anglesey",
+        "isPartOf": { "@id": "https://websitedesignanglesey.com/#website" },
+        "about": { "@id": "https://websitedesignanglesey.com/#organization" },
+        "description": "Learn how our Anglesey-based team of web developers, designers and digital marketers crafts bespoke, SEO-optimised websites that boost rankings and revenue across North Wales.",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://websitedesignanglesey.com/about-hero.jpg"
+        },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://websitedesignanglesey.com/about.html#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websitedesignanglesey.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://websitedesignanglesey.com/about.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
+<!-- COOKIE BANNER -->
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-desc"
+  class="cookie-banner"
+>
+  <div class="cookie-content">
+    <!-- Visible heading -->
+    <h2 id="cookie-banner-title" class="h5 mb-2">
+      We use cookies on this site
+    </h2>
+
+    <!-- Description text -->
+    <p id="cookie-banner-desc">
+      🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic.
+      By clicking “Accept All”, you consent to our use of cookies. See our
+      <a href="cookie-policy.html">Cookie Policy</a> for details.
+    </p>
+
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="btn-accept">Accept All 🍪</button>
+      <button id="cookie-decline" class="btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-white py-3" aria-label="Primary">
@@ -163,8 +310,7 @@
         action="https://api.web3forms.com/submit"
       >
         <!-- Web3Forms required hidden fields -->
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-        <input type="hidden" name="redirect" value="https://websitedesignanglesey.com/thank-you.html" />
+        <input type="hidden" name="access_key" value="ae44b6d0-9991-4f69-974e-802f107a5cf3" />
 
         <!-- User fields -->
         <div class="col-12 col-md-4">
@@ -249,7 +395,7 @@
   </div>
 </section>
 
-  <!-- ===== Footer ===== -->
+     <!-- ===== Footer ===== -->
 <footer class="site-footer bg-dark text-light pt-5 pb-5">
   <div class="container">
     <div class="row gy-4">
@@ -275,6 +421,17 @@
         </ul>
       </div>
 
+<!-- Pages -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Core Services</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="website-design.html" class="footer-link">Website Design</a></li>
+          <li><a href="ecommerce.html" class="footer-link">E-commerce Design</a></li>
+          <li><a href="branding.html" class="footer-link">Business Branding</a></li>
+          <li><a href="digital-marketing.html" class="footer-link">Digital Marketing</a></li>
+        </ul>
+      </div>
+
       <!-- Policies -->
       <div class="col-6 col-md-2">
         <h6 class="text-uppercase mb-3">Policies</h6>
@@ -287,12 +444,28 @@
       <!-- Follow Us -->
       <div class="col-12 col-md-4">
         <h6 class="text-uppercase mb-3">Follow Us</h6>
-        <a href="https://www.facebook.com/WebsiteDesignAnglesey/" target="_blank" class="social-icon me-3">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://g.co/kgs/oT4WdUH" target="_blank" class="social-icon">
-          <i class="bi bi-google"></i>
-        </a>
+        <!-- Facebook -->
+<a
+  href="https://www.facebook.com/WebsiteDesignAnglesey/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-icon me-3"
+  aria-label="Visit us on Facebook"
+>
+  <i class="bi bi-facebook" aria-hidden="true"></i>
+</a>
+
+<!-- Google Business -->
+<a
+  href="https://g.co/kgs/oT4WdUH"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-icon"
+  aria-label="View our Google Business profile"
+>
+  <i class="bi bi-google" aria-hidden="true"></i>
+</a>
+
       </div>
     </div>
 
@@ -329,6 +502,89 @@
     next && next.addEventListener('click', () => scrollByOne(1));
   })();
 </script>
-  
+  <script src="cookie.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('partnerForm');
+  if (!form) return;
+
+  // disallowed phone patterns
+  const badPhones = [
+    '00000','11111','22222','33333','44444',
+    '55555','66666','77777','88888','99999',
+    '0123456789','0987654321'
+  ];
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const nameEl  = form.querySelector('input[name="name"]');
+    const emailEl = form.querySelector('input[name="email"]');
+    const phoneEl = form.querySelector('input[name="phone"]');
+
+    // — NAME: first name only, at least 3 letters
+    if (nameEl) {
+      const name = nameEl.value.trim();
+      if (!/^[A-Za-z]{3,}$/.test(name)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid name',
+          text: 'Please enter your first name (at least 3 letters).'
+        });
+      }
+    }
+
+    // — EMAIL
+    if (emailEl) {
+      const email = emailEl.value.trim();
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid email',
+          text: 'Please enter a valid email address.'
+        });
+      }
+    }
+
+    // — PHONE
+    if (phoneEl) {
+      const phone = phoneEl.value.trim().replace(/\s+/g,'');
+      if (phone.length < 7 || badPhones.includes(phone)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid phone number',
+          text: 'Please enter a valid phone number.'
+        });
+      }
+    }
+
+    // all validations passed → submit via fetch
+    try {
+      const data = new FormData(form);
+      const res  = await fetch(form.action, { method: 'POST', body: data });
+      const json = await res.json();
+
+      if (json.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'Our team will get in touch with you soon.'
+        });
+        form.reset();
+      } else {
+        throw new Error('submission failed');
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong. Please try again later.'
+      });
+    }
+  });
+});
+</script>
+
 </body>
 </html>

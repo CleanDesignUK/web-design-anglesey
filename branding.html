@@ -4,23 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0006YLL6QM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0006YLL6QM');
+</script>
+
+   <!-- Primary SEO -->
   <title>Branding & Logo Design Anglesey | Brand Identity, Video & Print</title>
-  <meta name="description" content="Branding & logo design in Anglesey & North Wales. Signature branding with guidelines, video content creation & SEO, and digital/print design. One-off or monthly. Free 30-min consult.">
-  <link rel="canonical" href="https://YOURDOMAIN.com/branding.html">
+  <meta name="description" content="Branding & logo design in Anglesey & North Wales. Signature branding with guidelines, video content & SEO, and digital/print design. One-off or monthly. Free 30-min consult.">
+  <link rel="canonical" href="https://websitedesignanglesey.com/branding.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="language" content="en-GB">
+
+  <!-- Local hints -->
+  <meta name="geo.region" content="GB-WLS">
+  <meta name="geo.placename" content="Caergeiliog, Anglesey">
+  <meta name="format-detection" content="telephone=yes">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Website Design Anglesey">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="Branding & Logo Design Anglesey | Brand Identity, Video & Print">
   <meta property="og:description" content="Anglesey & North Wales branding studio: logos, guidelines, video content & SEO, brochures and social graphics. One-off or monthly. Free 30-min consult.">
-  <meta property="og:url" content="https://YOURDOMAIN.com/branding.html">
-  <meta property="og:image" content="https://YOURDOMAIN.com/og/branding-anglesey.jpg">
+  <meta property="og:url" content="https://websitedesignanglesey.com/branding.html">
+  <meta property="og:image" content="https://websitedesignanglesey.com/og/branding-anglesey.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Branding & Logo Design Anglesey">
   <meta name="twitter:description" content="Signature branding, video content & SEO, digital & print design for Anglesey & North Wales. Free 30-min consult.">
-  <meta name="twitter:image" content="https://YOURDOMAIN.com/og/branding-anglesey.jpg">
+  <meta name="twitter:image" content="https://websitedesignanglesey.com/og/branding-anglesey.jpg">
 
   <!-- Vendor -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -32,10 +53,144 @@
 
   <!-- Your site CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="website-design.css"><!-- or ecommerce.css if you use it sitewide -->
+  <link rel="stylesheet" href="website-design.css">
+  <link rel="stylesheet" href="cookie.css">
+
+
+<!-- Structured Data: WebSite + LocalBusiness + Service + WebPage + Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://websitedesignanglesey.com/#website",
+        "url": "https://websitedesignanglesey.com/",
+        "name": "Website Design Anglesey",
+        "publisher": { "@id": "https://websitedesignanglesey.com/#organization" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": ["LocalBusiness","ProfessionalService"],
+        "@id": "https://websitedesignanglesey.com/#organization",
+        "name": "Website Design Anglesey",
+        "url": "https://websitedesignanglesey.com/",
+        "image": "https://websitedesignanglesey.com/Website_Design_Anglesey_logo.png",
+        "logo": { "@type": "ImageObject", "url": "https://websitedesignanglesey.com/Website_Design_Anglesey_logo.png" },
+        "email": "mailto:jesse@cleandesignuk.com",
+        "telephone": "+44 7367 292269",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4 Ffordd Cerrig Mawr",
+          "addressLocality": "Caergeiliog",
+          "addressRegion": "Anglesey",
+          "postalCode": "LL65 3LU",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Anglesey" },
+          { "@type": "AdministrativeArea", "name": "North Wales" }
+        ],
+        "availableLanguage": ["English","Welsh"],
+        "sameAs": [
+          "https://www.facebook.com/WebsiteDesignAnglesey/",
+          "https://g.co/kgs/oT4WdUH"
+        ],
+        "priceRange": "££",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+44 7367 292269",
+          "email": "jesse@cleandesignuk.com",
+          "areaServed": "GB",
+          "availableLanguage": ["English","Welsh"]
+        }]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://websitedesignanglesey.com/branding.html#service-branding",
+        "serviceType": "Branding & Logo Design",
+        "alternateName": "Brand Identity, Guidelines, Video & Print",
+        "provider": { "@id": "https://websitedesignanglesey.com/#organization" },
+        "areaServed": ["Anglesey","North Wales"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Branding Packages",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Signature Branding & Logo" },
+            { "@type": "Offer", "name": "Video Content & SEO" },
+            { "@type": "Offer", "name": "Digital & Print Media" }
+          ]
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://websitedesignanglesey.com/branding.html#webpage",
+        "url": "https://websitedesignanglesey.com/branding.html",
+        "name": "Branding & Logo Design Anglesey | Brand Identity, Video & Print",
+        "isPartOf": { "@id": "https://websitedesignanglesey.com/#website" },
+        "about": { "@id": "https://websitedesignanglesey.com/#organization" },
+        "mainEntity": { "@id": "https://websitedesignanglesey.com/branding.html#service-branding" },
+        "description": "Branding & logo design in Anglesey & North Wales. Signature branding with guidelines, video content & SEO, and digital/print design. One-off or monthly.",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://websitedesignanglesey.com/og/branding-anglesey.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "inLanguage": "en-GB",
+        "potentialAction": {
+          "@type": "ContactAction",
+          "target": "https://websitedesignanglesey.com/contact.html#quote",
+          "name": "Book a Free Branding Call"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://websitedesignanglesey.com/branding.html#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://websitedesignanglesey.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Branding & Logo Design", "item": "https://websitedesignanglesey.com/branding.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+<!-- in your <head> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
+<!-- COOKIE BANNER -->
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-desc"
+  class="cookie-banner"
+>
+  <div class="cookie-content">
+    <!-- Visible heading -->
+    <h2 id="cookie-banner-title" class="h5 mb-2">
+      We use cookies on this site
+    </h2>
+
+    <!-- Description text -->
+    <p id="cookie-banner-desc">
+      🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic.
+      By clicking “Accept All”, you consent to our use of cookies. See our
+      <a href="cookie-policy.html">Cookie Policy</a> for details.
+    </p>
+
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="btn-accept">Accept All 🍪</button>
+      <button id="cookie-decline" class="btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-white py-3" aria-label="Primary">
     <div class="container">
@@ -198,16 +353,48 @@
         <div class="cta-card mx-auto text-center px-4 py-6">
           <h2 class="fw-bold display-5 mb-3">Ready to Refresh Your Brand in Anglesey?</h2>
           <p class="mb-4 text-muted">Get a free mini-audit and action plan for your logo, messaging and brand assets.</p>
-          <form id="partnerForm" class="row g-3 justify-content-center" method="POST" action="https://api.web3forms.com/submit">
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-            <input type="hidden" name="redirect" value="https://websitedesignanglesey.com/thank-you.html" />
-            <div class="col-12 col-md-4"><input type="text" class="form-control" name="name" placeholder="Your full name" required></div>
-            <div class="col-12 col-md-4"><input type="email" class="form-control" name="email" placeholder="Your business email" required></div>
-            <div class="col-12 col-md-4"><input type="tel" class="form-control" name="phone" placeholder="Phone number" required></div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">Book Free Branding Consult</button>
-            </div>
-          </form>
+          <form
+  id="partnerForm"
+  class="row g-3 justify-content-center"
+  method="POST"
+  action="https://api.web3forms.com/submit"
+>
+  <input type="hidden" name="access_key" value="ae44b6d0-9991-4f69-974e-802f107a5cf3" />
+
+  <div class="col-12 col-md-4">
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      placeholder="Your first name"
+      required
+    >
+  </div>
+  <div class="col-12 col-md-4">
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      placeholder="Your business email"
+      required
+    >
+  </div>
+  <div class="col-12 col-md-4">
+    <input
+      type="tel"
+      class="form-control"
+      name="phone"
+      placeholder="Phone number"
+      required
+    >
+  </div>
+  <div class="col-12 text-center">
+    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+      Book Free Branding Consult
+    </button>
+  </div>
+</form>
+
         </div>
       </div>
     </section>
@@ -228,49 +415,91 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer bg-dark text-light pt-5 pb-5">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <div class="d-flex align-items-center mb-3">
-            <img src="Website Design Anglesey logo.jpg" alt="Web Design Anglesey logo" width="30" height="30" class="me-2">
-            <h5 class="mb-0">Website Design Anglesey</h5>
-          </div>
-          <p class="small mb-0">Affordable web design &amp; SEO services for small businesses across Anglesey and North Wales.</p>
+     <!-- ===== Footer ===== -->
+<footer class="site-footer bg-dark text-light pt-5 pb-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Brand & Description -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="Website Design Anglesey logo.jpg" alt="Web Design Anglesey logo" width="30" height="30" class="me-2">
+          <h5 class="mb-0">Website Design Anglesey</h5>
         </div>
-        <div class="col-6 col-md-2">
-          <h6 class="text-uppercase mb-3">Pages</h6>
-          <ul class="list-unstyled small mb-0">
-            <li><a href="/" class="footer-link">Home</a></li>
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/services/website-design.html" class="footer-link">Services</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6 class="text-uppercase mb-3">Policies</h6>
-          <ul class="list-unstyled small mb-0">
-            <li><a href="/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
-            <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-4">
-          <h6 class="text-uppercase mb-3">Follow Us</h6>
-          <a href="https://www.facebook.com/WebsiteDesignAnglesey/" target="_blank" class="social-icon me-3"><i class="bi bi-facebook"></i></a>
-          <a href="https://g.co/kgs/oT4WdUH" target="_blank" class="social-icon"><i class="bi bi-google"></i></a>
-        </div>
+        <p class="small mb-0">
+          Affordable web design & SEO services for small businesses across Anglesey and North Wales.
+        </p>
       </div>
 
-      <hr class="border-secondary my-4">
-      <div class="row">
-        <div class="col text-center small">
-          &copy; 2025 Website Design Anglesey. All rights reserved. <br>
-          Part of <a href="https://cleandesignuk.com" target="_blank" class="footer-link">Clean Design UK</a>
-        </div>
+      <!-- Pages -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Pages</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="/" class="footer-link">Home</a></li>
+          <li><a href="/about.html" class="footer-link">About</a></li>
+          <li><a href="/services/website-design.html" class="footer-link">Services</a></li>
+          <li><a href="/contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+<!-- Pages -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Core Services</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="website-design.html" class="footer-link">Website Design</a></li>
+          <li><a href="ecommerce.html" class="footer-link">E-commerce Design</a></li>
+          <li><a href="branding.html" class="footer-link">Business Branding</a></li>
+          <li><a href="digital-marketing.html" class="footer-link">Digital Marketing</a></li>
+        </ul>
+      </div>
+
+      <!-- Policies -->
+      <div class="col-6 col-md-2">
+        <h6 class="text-uppercase mb-3">Policies</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
+          <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-12 col-md-4">
+        <h6 class="text-uppercase mb-3">Follow Us</h6>
+        <!-- Facebook -->
+<a
+  href="https://www.facebook.com/WebsiteDesignAnglesey/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-icon me-3"
+  aria-label="Visit us on Facebook"
+>
+  <i class="bi bi-facebook" aria-hidden="true"></i>
+</a>
+
+<!-- Google Business -->
+<a
+  href="https://g.co/kgs/oT4WdUH"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-icon"
+  aria-label="View our Google Business profile"
+>
+  <i class="bi bi-google" aria-hidden="true"></i>
+</a>
+
       </div>
     </div>
-  </footer>
+
+    <hr class="border-secondary my-4">
+
+    <div class="row">
+      <div class="col text-center small">
+        &copy; 2025 Website Design Anglesey. All rights reserved. <br>  
+        Part of
+        <a href="https://cleandesignuk.com" target="_blank" class="footer-link">Clean Design UK</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -313,5 +542,89 @@
       buttons.forEach(btn => btn.addEventListener('click', () => updateUI(btn.dataset.plan)));
     });
   </script>
+  <script src="cookie.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('partnerForm');
+  if (!form) return;
+
+  // disallow simple repeats & sequences
+  const badPhones = [
+    '00000','11111','22222','33333','44444',
+    '55555','66666','77777','88888','99999',
+    '0123456789','0987654321'
+  ];
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const nameEl  = form.querySelector('input[name="name"]');
+    const emailEl = form.querySelector('input[name="email"]');
+    const phoneEl = form.querySelector('input[name="phone"]');
+
+    // — NAME: only first name, at least 3 letters
+    if (nameEl) {
+      const name = nameEl.value.trim();
+      if (!/^[A-Za-z]{3,}$/.test(name)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid name',
+          text: 'Please enter your first name (at least 3 letters).'
+        });
+      }
+    }
+
+    // — EMAIL
+    if (emailEl) {
+      const email = emailEl.value.trim();
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid email',
+          text: 'Please enter a valid email address.'
+        });
+      }
+    }
+
+    // — PHONE
+    if (phoneEl) {
+      const phone = phoneEl.value.trim().replace(/\s+/g,'');
+      if (phone.length < 7 || badPhones.includes(phone)) {
+        return Swal.fire({
+          icon: 'error',
+          title: 'Invalid phone number',
+          text: 'Please enter a valid phone number.'
+        });
+      }
+    }
+
+    // all good → post via Fetch
+    try {
+      const data = new FormData(form);
+      const res  = await fetch(form.action, { method: 'POST', body: data });
+      const json = await res.json();
+
+      if (json.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'Our team will get in touch with you soon.'
+        });
+        form.reset();
+      } else {
+        throw new Error('submission failed');
+      }
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong. Please try again later.'
+      });
+    }
+  });
+});
+</script>
+
 </body>
 </html>

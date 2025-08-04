@@ -1,0 +1,76 @@
+/* cookie.css */
+
+/* Banner container */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #850113;
+  color: #fff;
+  z-index: 9999;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+/* Inner content wrapper */
+.cookie-content {
+  max-width: 800px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Policy link */
+.cookie-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Buttons container */
+.cookie-buttons {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Button base style */
+.btn-accept,
+.btn-decline {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Accept button */
+.btn-accept {
+  background: #c52037;
+  color: #fff;
+}
+.btn-accept:hover {
+  background: #c52037;
+}
+
+/* Decline button */
+.btn-decline {
+  background: #fff;
+  color: #000;
+}
+.btn-decline:hover {
+  background: #f2f2f2;
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+  .cookie-content p {
+    font-size: 0.85rem;
+  }
+  .btn-accept,
+  .btn-decline {
+    flex: 1;
+  }
+}
