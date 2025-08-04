@@ -233,12 +233,6 @@ color: #fff;}
   .pkg-card:not(.featured):hover{background:rgba(255,255,255,.1);}
 }
 
-/* helper that **always** puts its single child in the middle */
-.toggle-holder{
-  display:flex;              /* becomes a flex-box */
-  justify-content:center;    /* centres horizontally */
-  margin-block:2rem 3rem;    /* optional top/bottom breathing-space */
-}
 
 /* LIGHT-ON-HOVER effect for all non-featured cards */
 .pkg-card:hover{
@@ -263,16 +257,6 @@ color: #fff;}
   background:#fff;      /*   <– keep or drop */
   color:#111;
 }
-/* ░░ Price-toggle pill ░░ */
-.price-toggle{
-  position:relative;
-  display:inline-flex;
-  border:1.5px solid rgba(255,255,255,.55);
-  border-radius:3rem;
-  padding:0;
-  overflow:hidden;
-  isolation:isolate;          /* so the shadow never leaks */
-}
 
 .pt-btn{
   position:relative;
@@ -296,13 +280,54 @@ color: #fff;}
   box-shadow:0 2px 6px rgb(0 0 0 /.25) inset;
 }
 
-/* move the indicator when "Monthly" is active */
-.price-toggle.monthly .pt-indicator{
-  transform:translateX(100%);
+/* ░░ Price-toggle pill (works on light or dark backgrounds) ░░ */
+.price-toggle{
+  position:relative;
+  display:inline-flex;
+  border-radius:3rem;
+  padding:0;
+  overflow:hidden;
+  isolation:isolate;
 }
 
-/* light text over indicator, dim elsewhere */
-.price-toggle .pt-btn{color:#ddd;}
-.price-toggle .pt-btn:hover{color:#fff}
-.price-toggle.one-off   .pt-btn[data-plan="one-off"],
-.price-toggle.monthly  .pt-btn[data-plan="monthly"]{color:#fff;}
+/* pick border/bg by theme */
+.price-toggle.on-light{
+  border:1.5px solid rgba(0,0,0,.15);
+  background:rgba(0,0,0,.04);
+}
+.price-toggle.on-dark{
+  border:1.5px solid rgba(255,255,255,.45);
+  background:rgba(255,255,255,.08);
+}
+
+.price-toggle .pt-btn{
+  position:relative;
+  z-index:1;
+  flex:0 0 8.25rem;           /* equal widths */
+  font:600 1rem/1 "Inter",sans-serif;
+  padding:.75rem 0;
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  color:#6b6b6b;
+  transition:color .2s;
+}
+.price-toggle .pt-btn:hover{ color:#111; }
+
+/* sliding indicator */
+.price-toggle .pt-indicator{
+  position:absolute;
+  inset:2px calc(50% + 2px) 2px 2px;   /* leave 2px gap for the border */
+  background:var(--accent,#c61726);
+  border-radius:inherit;
+  transition:transform .25s cubic-bezier(.45,0,.2,1);
+  box-shadow:0 2px 6px rgb(0 0 0 /.25) inset;
+}
+.price-toggle.monthly .pt-indicator{ transform:translateX(100%); }
+
+/* active label turns white over the red indicator; inactive stays visible */
+.price-toggle.one-off  .pt-btn[data-plan="one-off"],
+.price-toggle.monthly .pt-btn[data-plan="monthly"]{ color:#fff; }
+
+/* make sure no old styles compete */
+.price-toggle .pt-btn.active{ background:none; }   /* neutralize old rule */
