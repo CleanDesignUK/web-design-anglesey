@@ -265,7 +265,7 @@
 
 
 /* --- Safety: prevent stray horizontal scroll (optional) --- */
-html, body { max-width: 100%; overflow-x: hidden; }
+html, body { max-width: 100%; }
 
 /* --- Make all images scale nicely --- */
 img { max-width: 100%; height: auto; }
