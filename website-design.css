@@ -283,3 +283,5 @@ color: #fff;}
 @media (max-width: 380px){
   .price-toggle{ --btnw: 7.25rem; }
 }
+/* website-design.css */
+.price-toggle .pt-indicator{ pointer-events: none; }
