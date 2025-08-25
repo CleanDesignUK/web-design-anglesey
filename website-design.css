@@ -132,39 +132,6 @@
 /* ░░░ Pricing switcher ░░░──────────────────────────────────────── */
 #site-packages{--gap:1.25rem;}
 
-.price-toggle{
-  position:relative;
-  display:inline-flex;
-  background:none;
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:2.5rem;
-  overflow:hidden;
-  padding:0;
-}
-
-.pt-btn{
-  position:relative;
-  z-index:2;
-  border:0;
-  background:none;
-  color:#fff;
-  font-weight:600;
-  padding:.6rem 2.4rem;
-  font-size:1rem;
-  transition:color .15s;
-}
-
-.pt-btn.active{color:#fff;
-background: #c61726;}
-
-.pt-indicator{
-  position:absolute;
-  inset:0 50% 0 0;               /* start under “One-Off” */
-  background:var(--accent,#000000);
-  border-radius:2.5rem;
-  transition:transform .25s cubic-bezier(.42,0,.2,1), inset .25s;
-}
-
 /* ░░░ Package cards ░░░────────────────────────────────────────── */
 .pkg-card{
   height:100%;
@@ -258,76 +225,61 @@ color: #fff;}
   color:#111;
 }
 
-.pt-btn{
-  position:relative;
-  z-index:2;                  /* sits above the indicator */
-  flex:0 0 8rem;              /* identical widths */
-  font:600 1rem/1 "Inter",sans-serif;
-  padding:.75rem 0;
-  color:#fff;
-  background:none;
-  border:0;
-  cursor:pointer;
-  transition:color .2s;
-}
-
-.pt-indicator{               /* the sliding red pill */
-  position:absolute;
-  inset:0 50% 0 0;           /* start under "One-Off" */
-  background:var(--accent,#c61726);
-  border-radius:inherit;
-  transition:transform .25s cubic-bezier(.45,0,.2,1);
-  box-shadow:0 2px 6px rgb(0 0 0 /.25) inset;
-}
-
-/* ░░ Price-toggle pill (works on light or dark backgrounds) ░░ */
+/* Price toggle — single source of truth */
 .price-toggle{
-  position:relative;
-  display:inline-flex;
-  border-radius:3rem;
-  padding:0;
-  overflow:hidden;
-  isolation:isolate;
+  --pad: 2px;              /* inner gap */
+  --btnw: 8.25rem;         /* button width, adjusted below on phones */
+  position: relative;
+  display: inline-flex;
+  border-radius: 999px;
+  padding: var(--pad);
+  overflow: hidden;
+  isolation: isolate;
 }
 
 /* pick border/bg by theme */
 .price-toggle.on-light{
-  border:1.5px solid rgba(0,0,0,.15);
-  background:rgba(0,0,0,.04);
+  border: 1.5px solid rgba(0,0,0,.15);
+  background: rgba(0,0,0,.04);
 }
 .price-toggle.on-dark{
-  border:1.5px solid rgba(255,255,255,.45);
-  background:rgba(255,255,255,.08);
+  border: 1.5px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.08);
 }
 
+/* labels */
 .price-toggle .pt-btn{
-  position:relative;
-  z-index:1;
-  flex:0 0 8.25rem;           /* equal widths */
-  font:600 1rem/1 "Inter",sans-serif;
-  padding:.75rem 0;
-  background:transparent;
-  border:0;
-  cursor:pointer;
-  color:#6b6b6b;
-  transition:color .2s;
+  position: relative;
+  z-index: 2;
+  flex: 0 0 var(--btnw);
+  padding: .75rem 0;
+  font: 600 1rem/1 "Inter", system-ui, sans-serif;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #6b6b6b;          /* inactive label */
+  transition: color .2s;
 }
 .price-toggle .pt-btn:hover{ color:#111; }
 
-/* sliding indicator */
+/* sliding pill */
 .price-toggle .pt-indicator{
-  position:absolute;
-  inset:2px calc(50% + 2px) 2px 2px;   /* leave 2px gap for the border */
-  background:var(--accent,#c61726);
-  border-radius:inherit;
-  transition:transform .25s cubic-bezier(.45,0,.2,1);
-  box-shadow:0 2px 6px rgb(0 0 0 /.25) inset;
+  position: absolute;
+  top: var(--pad); bottom: var(--pad); left: var(--pad);
+  width: calc(50% - var(--pad));
+  border-radius: 999px;
+  background: var(--accent, #c61726);
+  transform: translateX(0%);    /* left half */
+  transition: transform .25s cubic-bezier(.45,0,.2,1);
+  box-shadow: 0 2px 6px rgb(0 0 0 /.25) inset;
 }
-.price-toggle.monthly .pt-indicator{ transform:translateX(100%); }
+.price-toggle.monthly .pt-indicator{ transform: translateX(100%); }
 
-/* active label turns white over the red indicator; inactive stays visible */
+/* active label turns white over the red pill */
 .price-toggle.one-off  .pt-btn[data-plan="one-off"],
 .price-toggle.monthly .pt-btn[data-plan="monthly"]{ color:#fff; }
 
-/* make sure no old styles compete */
-.price-toggle .pt-btn.active{ background:none; }   /* neutralize old rule */
+/* small phones: shrink label width a bit */
+@media (max-width: 380px){
+  .price-toggle{ --btnw: 7.25rem; }
+}
