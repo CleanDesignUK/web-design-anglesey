@@ -225,76 +225,36 @@ color: #fff;}
   color:#111;
 }
 
-/* Price toggle — single source of truth */
-.price-toggle{
-  --pad: 2px;              /* inner gap */
-  --btnw: 8.25rem;         /* button width, adjusted below on phones */
-  position: relative;
+/* === Reference-style pricing toggle (no slider) === */
+.pricing-toggle {
   display: inline-flex;
+  gap: 2px;
   border-radius: 999px;
-  padding: var(--pad);
-  overflow: hidden;
-  isolation: isolate;
+  padding: 3px;
+  background: rgba(0,0,0,.04);                 /* light bg */
+  border: 1.5px solid rgba(0,0,0,.15);         /* subtle border */
 }
 
-/* pick border/bg by theme */
-.price-toggle.on-light{
-  border: 1.5px solid rgba(0,0,0,.15);
-  background: rgba(0,0,0,.04);
-}
-.price-toggle.on-dark{
-  border: 1.5px solid rgba(255,255,255,.45);
-  background: rgba(255,255,255,.08);
-}
-
-/* labels */
-.price-toggle .pt-btn{
-  position: relative;
-  z-index: 2;
-  flex: 0 0 var(--btnw);
-  padding: .75rem 0;
-  font: 600 1rem/1 "Inter", system-ui, sans-serif;
+.toggle-btn {
   background: transparent;
   border: 0;
-  cursor: pointer;
-  color: #6b6b6b;          /* inactive label */
-  transition: color .2s;
-}
-.price-toggle .pt-btn:hover{ color:#111; }
-
-/* sliding pill */
-.price-toggle .pt-indicator{
-  position: absolute;
-  top: var(--pad); bottom: var(--pad); left: var(--pad);
-  width: calc(50% - var(--pad));
   border-radius: 999px;
-  background: var(--accent, #c61726);
-  transform: translateX(0%);    /* left half */
-  transition: transform .25s cubic-bezier(.45,0,.2,1);
-  box-shadow: 0 2px 6px rgb(0 0 0 /.25) inset;
-}
-.price-toggle.monthly .pt-indicator{ transform: translateX(100%); }
-
-/* active label turns white over the red pill */
-.price-toggle.one-off  .pt-btn[data-plan="one-off"],
-.price-toggle.monthly .pt-btn[data-plan="monthly"]{ color:#fff; }
-
-/* small phones: shrink label width a bit */
-@media (max-width: 380px){
-  .price-toggle{ --btnw: 7.25rem; }
-}
-/* website-design.css */
-.price-toggle .pt-indicator{ pointer-events: none; }
-
-/* === TOGGLE TAP HOTFIX (do not remove) === */
-#priceToggle { position: relative; z-index: 10; }
-#priceToggle .pt-btn {
-  position: relative; z-index: 2 !important;
+  color: #6b6b6b;
+  font: 600 1rem/1 "Inter", system-ui, sans-serif;
+  padding: .6rem 1.75rem;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .15s;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  pointer-events: auto !important;
 }
-#priceToggle .pt-indicator {
-  position: absolute; z-index: 0 !important;
-  pointer-events: none !important;   /* slider can’t swallow taps */
+
+.toggle-btn:hover { color: #111; }
+.toggle-btn.active {
+  background: var(--accent, #c61726);
+  color: #fff;
+}
+
+/* small phones: keep both buttons comfy */
+@media (max-width: 380px){
+  .toggle-btn { padding: .55rem 1.35rem; }
 }
