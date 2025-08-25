@@ -285,3 +285,16 @@ color: #fff;}
 }
 /* website-design.css */
 .price-toggle .pt-indicator{ pointer-events: none; }
+
+/* === TOGGLE TAP HOTFIX (do not remove) === */
+#priceToggle { position: relative; z-index: 10; }
+#priceToggle .pt-btn {
+  position: relative; z-index: 2 !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  pointer-events: auto !important;
+}
+#priceToggle .pt-indicator {
+  position: absolute; z-index: 0 !important;
+  pointer-events: none !important;   /* slider can’t swallow taps */
+}
