@@ -295,13 +295,14 @@
     <!-- PRICING / PACKAGES (toggle retained; branding packages) -->
     <section id="site-packages" class="py-8">
       <div class="container">
-        <div class="toggle-holder d-flex justify-content-center pb-4">
-          <div id="priceToggle" class="price-toggle one-off on-light mx-auto">
-            <span class="pt-indicator"></span>
-            <button type="button" class="pt-btn" data-plan="one-off">One-Off</button>
-            <button type="button" class="pt-btn" data-plan="monthly">Monthly</button>
-          </div>
-        </div>
+<!-- centre helper (keep) -->
+<div class="toggle-holder d-flex justify-content-center pb-4">
+  <!-- NEW: reference-style toggle -->
+  <div id="priceToggle" class="pricing-toggle">
+    <button class="toggle-btn active" data-mode="oneoff">One-Off</button>
+    <button class="toggle-btn" data-mode="monthly">Monthly</button>
+  </div>
+</div>
 
         <div class="row g-4 justify-content-center">
           <!-- Signature Branding & Logo Design -->
@@ -533,25 +534,41 @@
     }
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle  = document.getElementById('priceToggle');
-      const buttons = toggle.querySelectorAll('.pt-btn');
-      const cards   = document.querySelectorAll('.pkg-card');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('priceToggle');
+  if (!toggle) return;
 
-      function updateUI(plan){
-        toggle.classList.remove('one-off','monthly');
-        toggle.classList.add(plan);
-        cards.forEach(card => {
-          const priceEl  = card.querySelector('.pkg-price');
-          const newPrice = plan === 'monthly' ? card.dataset.priceMonth : card.dataset.priceOnce;
-          priceEl.innerHTML = newPrice;
-        });
-      }
-      updateUI('one-off');
-      buttons.forEach(btn => btn.addEventListener('click', () => updateUI(btn.dataset.plan)));
+  const cards = document.querySelectorAll('.pkg-card');
+
+  function setMode(mode) {
+    // visual active state (like the reference site)
+    toggle.querySelectorAll('.toggle-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.mode === mode)
+    );
+
+    // update prices (uses your data attributes)
+    const monthly = mode === 'monthly';
+    cards.forEach(card => {
+      const priceEl  = card.querySelector('.pkg-price');
+      const newPrice = monthly ? card.dataset.priceMonth : card.dataset.priceOnce;
+      if (priceEl) priceEl.innerHTML = newPrice || '';
     });
-  </script>
+  }
+
+  // init to one-off (matches reference)
+  setMode('oneoff');
+
+  // robust delegation (works on all phones)
+  toggle.addEventListener('click', (e) => {
+    const btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
+    setMode(btn.dataset.mode);
+  });
+});
+</script>
+
+
   <script src="cookie.js"></script>
 
   <script>
