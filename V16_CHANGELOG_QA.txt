@@ -1,0 +1,10 @@
+html_pages: 41
+cookie_banner_pages: 41
+gtm_pages: 41
+web3forms_forms: 68
+sweetalert_pages: 41
+clean_design_about_visible_mentions: 1
+contact_internal_checklist_remaining: False
+footer_facebook_pages: 41
+footer_google_pages: 41
+part_of_cduk_pages: 41

@@ -1,37 +1,40 @@
-// cookie.js
 (function(){
-  // Set a cookie
-  function setCookie(name, value, days) {
-    const d = new Date();
+  function setCookie(name, value, days){
+    var d = new Date();
     d.setTime(d.getTime() + days*24*60*60*1000);
-    document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`;
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
   }
-  // Read a cookie
-  function getCookie(name) {
-    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  function getCookie(name){
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
     return match ? decodeURIComponent(match[2]) : null;
   }
-  // Hide the banner
-  function hideBanner() {
-    const banner = document.getElementById('cookie-banner');
+  function hideBanner(){
+    var banner = document.getElementById('cookie-banner');
     if (banner) banner.style.display = 'none';
   }
-
-  // If consent already given or declined, hide immediately
-  if (getCookie('cookieConsent')) {
-    hideBanner();
-    return;
+  function pushConsent(analytics){
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: analytics ? 'cookie_analytics_accepted' : 'cookie_analytics_declined', analytics_consent: analytics ? 'granted' : 'denied' });
   }
-
-  // Wire up buttons
-  document.getElementById('cookie-accept').addEventListener('click', function(){
-    const prefs = { necessary: true, analytics: true, functionality: true };
-    setCookie('cookieConsent', JSON.stringify(prefs), 365);
-    hideBanner();
-  });
-  document.getElementById('cookie-decline').addEventListener('click', function(){
-    const prefs = { necessary: true, analytics: false, functionality: false };
-    setCookie('cookieConsent', JSON.stringify(prefs), 365);
-    hideBanner();
+  window.wdaCookieConsent = { getCookie:getCookie, pushConsent:pushConsent };
+  document.addEventListener('DOMContentLoaded', function(){
+    var saved = getCookie('cookieConsent');
+    if (saved) {
+      try { pushConsent(!!JSON.parse(saved).analytics); } catch(e) {}
+      hideBanner();
+      return;
+    }
+    var accept = document.getElementById('cookie-accept');
+    var decline = document.getElementById('cookie-decline');
+    if (accept) accept.addEventListener('click', function(){
+      setCookie('cookieConsent', JSON.stringify({ necessary:true, analytics:true }), 365);
+      pushConsent(true);
+      hideBanner();
+    });
+    if (decline) decline.addEventListener('click', function(){
+      setCookie('cookieConsent', JSON.stringify({ necessary:true, analytics:false }), 365);
+      pushConsent(false);
+      hideBanner();
+    });
   });
 })();

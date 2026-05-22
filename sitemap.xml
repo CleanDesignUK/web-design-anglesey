@@ -1,58 +1,43 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://websitedesignanglesey.com/</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/cookie-policy.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/index.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/about.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/website-design.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/ecommerce.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/branding.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/digital-marketing.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/pricing.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/contact.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://websitedesignanglesey.com/privacy-policy.html</loc>
-<lastmod>2025-08-04T11:40:25+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://websitedesignanglesey.com/about.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/affordable-website-design-anglesey.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/areas.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/branding.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/contact.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/cookie-policy.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/digital-marketing.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/ecommerce.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/gallery.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/gohighlevel-support-uk.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/google-business-profile-optimisation-anglesey.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/</loc></url>
+  <url><loc>https://websitedesignanglesey.com/landing-page-design-anglesey.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/portfolio.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/privacy-policy.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/seo-anglesey.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/seo-north-wales.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/services.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/terms.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/thank-you.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-amlwch.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-anglesey.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-bangor.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-beaumaris.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-benllech.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-bodedern.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-caernarfon.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-conwy.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-gaerwen.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-gwynedd.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-holyhead.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-llandudno.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-llangefni.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-menai-bridge.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-rhosneigr.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-trearddur-bay.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/web-design-valley.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/website-design-north-wales.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/website-design.html</loc></url>
+  <url><loc>https://websitedesignanglesey.com/website-redesign-anglesey.html</loc></url>
 </urlset>

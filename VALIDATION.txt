@@ -1,0 +1,5 @@
+HTML files: 33
+Sitemap URLs: 28
+Errors: 0
+Warnings: 0
+Status: PASS
